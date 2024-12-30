@@ -1,0 +1,133 @@
+extends base.pug
+
+block scripts
+    script(src='/static/about.js')
+
+block style
+    style
+        include ../static/style.css
+        include ../static/about.css
+
+block content
+    section#intro
+        div.intro-text
+            h1 Welcome to Husam Dance Academy
+            p We are a premier dance academy dedicated to nurturing creativity, passion, and talent through various forms of dance. Whether you're a beginner or an advanced dancer, we offer classes for all skill levels.
+        div.intro-image
+            img(src="https://images.unsplash.com/photo-1495109251996-432ef0887b37?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFuY2UlMjBhY2FkZW15fGVufDB8fDB8fHww", alt="Dance Academy" class="intro-img")
+
+    section#story
+        h2 Our Story
+        div.story-wrapper
+            div.left-side
+                p Founded by Husam, a professional dancer with over 15 years of experience in the dance industry, the academy aims to inspire and cultivate the next generation of dancers. What started as a small studio has grown into a vibrant community, where students not only learn dance techniques but also the importance of discipline, teamwork, and self-expression.
+            div.right-side
+                img(src="https://images.pexels.com/photos/7336705/pexels-photo-7336705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="Founder Husam" class="story-img")
+
+    section#mission-values
+        h2 Our Mission & Values
+        div.mission-container
+            div.mission-card
+                img(src="https://static.thenounproject.com/png/1684637-200.png")
+                h3 Integrity
+                p We believe in integrity and respect in everything we do.
+            div.mission-card
+                img(src="https://cdn-icons-png.flaticon.com/512/5377/5377594.png", alt="Excellence Icon")
+                h3 Excellence
+                p We strive for excellence and continuous growth in every dancer’s journey.
+            div.mission-card
+                img(src="https://cdn-icons-png.flaticon.com/512/4474/4474609.png", alt="Passion Icon")
+                h3 Passion
+                p We have a deep passion for dance as an art form and a way of life.
+            div.mission-card
+                img(src="https://www.freeiconspng.com/thumbs/community-icon/community-icon-6.png", alt="Community Icon")
+                h3 Community
+                p We foster a sense of community and collaboration, building a family atmosphere.
+
+    section#interactive-features
+    h2 Interactive Features
+    .carousel-container
+        .carousel-slide
+            .carousel-item
+                img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDihMSoHSXuwZLWTk4HS5kx9HYcI54rFq3gw&s", alt="Virtual Dance Classes")
+                h3 Virtual Dance Classes
+                p Join our online dance classes and learn from anywhere in the world. Whether you're at home or traveling, our virtual classes bring the studio to you.
+            .carousel-item
+                img(src="https://images.squarespace-cdn.com/content/v1/55fb71b1e4b09b900cf9df2f/1451782576829-JG1MILXZF1UP3ITJJ0PL/ATDWeb_PerformanceOpportunities.jpg?format=1500w", alt="Performance Opportunities")
+                h3 Performance Opportunities
+                p Get the chance to showcase your skills at our regular recitals and events, performing in front of family, friends, and the entire dance academy community.
+            .carousel-item
+                .login-btn-container
+                    a(href="/login") Login to Join Classes
+                p Be part of the Husam Dance Academy community and elevate your dance journey with us.
+        
+        .carousel-controls
+            button#prev-slide.carousel-btn Prev
+            button#next-slide.carousel-btn Next
+
+
+    section#contact-info
+    h2 Contact Information
+    .contact-container
+        .contact-item
+            img(src="https://img.icons8.com/ios-filled/50/000000/email.png", alt="Email Icon")
+            h3 Email
+            p: a(href="mailto:contact@husamdanceacademy.com") contact@husamdanceacademy.com
+        .contact-item
+            img(src="https://img.icons8.com/ios-filled/50/000000/phone.png", alt="Phone Icon")
+            h3 Phone
+            p +123 456 7890
+        .contact-item
+            img(src="https://img.icons8.com/ios-filled/50/000000/map-pin.png", alt="Location Icon")
+            h3 Address
+            p 123 Dance Lane, City, Country
+        .contact-item
+            img(src="https://img.icons8.com/ios-filled/50/000000/facebook.png", alt="Facebook Icon")
+            h3 Social Media
+            ul
+                li: a(href="https://www.instagram.com/husamdance") Instagram
+                li: a(href="https://www.facebook.com/husamdance") Facebook
+                li: a(href="https://www.twitter.com/husamdance") Twitter
+
+    section#testimonials
+    h2 Testimonial
+    .testimonial-carousel-container
+        .testimonial-carousel
+            .testimonial-item
+                img(src="https://randomuser.me/api/portraits/men/1.jpg", alt="User 1")
+                h3 John Doe
+                p "The best dance academy! I've learned so much in such a short time. Highly recommend it!"
+                .author-title CEO, Dance Studios
+            .testimonial-item
+                img(src="https://randomuser.me/api/portraits/women/2.jpg", alt="User 2")
+                h3 Sarah Smith
+                p "Husam Dance Academy made me fall in love with dancing all over again. Excellent trainers!"
+                .author-title Professional Dancer
+            .testimonial-item
+                img(src="https://randomuser.me/api/portraits/men/3.jpg", alt="User 3")
+                h3 Mark Johnson
+                p "Great atmosphere, supportive community. It's a wonderful place to grow as a dancer."
+                .author-title Dance Enthusiast
+
+        .carousel-controls
+            button#prev(class="carousel-btn") Prev
+            button#next(class="carousel-btn") Next
+
+
+    section#location
+    h2 Our Location
+    p Come visit us and experience the best dance training in the city!
+    .location-container
+        .location-left
+            div#map
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.204038804073!2d-0.12764758449128163!3d51.5073509904549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3f0c06c64d%3A0x7a7d1fbbc0bc34fe!2sHusam%20Dance%20Academy!5e0!3m2!1sen!2sus!4v1636035109600!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy")
+        .location-right
+            .location-info
+                h3 Visit Us
+                p Located at the heart of the city, we offer world-class dance training in a vibrant studio. Come experience it for yourself!
+                address: 123 Dance Street, Cityname, Country
+                .cta-btn
+                    a(href="/contact") Contact Us
+
+
+ 

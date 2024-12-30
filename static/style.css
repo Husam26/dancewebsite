@@ -1,0 +1,639 @@
+/* General reset for consistent styling */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+#navbar {
+    background-color: #222;
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#navbar li {
+    display: inline-block;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.0em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Dancing Script', cursive;
+}
+
+#navbar a:hover {
+    background-color: #FF5733;
+    color: white;
+}
+
+/* Navbar responsive styling */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #navbar a {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+}
+
+/* Picture Section */
+#picture-Section {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1598475052128-d33e84d00787?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Increased height for the picture section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+#picture-Section h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#picture-Section p {
+    font-size: 1rem;
+    margin-top: 2px;
+    font-weight: normal;
+}
+
+#picture-Section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+#picture-Section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive styling for the picture section */
+@media (max-width: 768px) {
+    #picture-Section {
+        height: 400px; /* Slightly adjusted for smaller screens */
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+
+    #picture-Section h1 {
+        font-size: 1.5rem;
+    }
+
+    #picture-Section p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Sponsor Section */
+#sponser-Section {
+    background-color: #f4f4f4;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Responsive sponsor section */
+@media (max-width: 768px) {
+    #sponser-Section {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    #sponser-Section p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mission Section */
+#mission-Section {
+    background-color: #f4f4f4;
+    padding: 20px 15px; /* Decreased padding */
+    text-align: center;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#mission-Section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#mission-Section h2 {
+    font-size: 1.8rem; /* Decreased font size */
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 15px; /* Reduced space */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#mission-Section p {
+    font-size: 0.64rem; /* Slightly smaller font */
+    line-height: 1.4;
+    margin: 8px 0 15px; /* Reduced margin */
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+/* Cards Container */
+#mission-Section .cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual Card Styling */
+#mission-Section .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Decreased card width */
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px; /* Space between cards */
+}
+
+#mission-Section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header */
+#mission-Section .card-header {
+    font-size: 1.0rem; /* Smaller font size */
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Card Body */
+#mission-Section .card-body p {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Styling for Cards */
+@media (max-width: 768px) {
+    #mission-Section .cards-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #mission-Section .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Call-to-action button styling */
+#mission-Section .cta-button {
+    margin-top: 20px; /* Smaller space before button */
+    margin-bottom: 20px;
+    display: inline-block; /* Inline button */
+    background-color: #4a4a4a; /* Darker color for the button */
+    padding: 8px 20px; /* Smaller padding for a compact button */
+    font-size: 0.9rem; /* Smaller font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 25px; /* Rounded corners for a soft look */
+    text-decoration: none; /* Remove underline */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 1px; /* Space between letters */
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    color: white; /* White text inside the button */
+}
+
+/* Button hover effect */
+#mission-Section .cta-button:hover {
+    background-color: #333; /* Slightly darker color on hover */
+    transform: translateY(-2px); /* Slight hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+/* Ensure no underline and text color inside the link */
+#mission-Section .cta-button a {
+    color: white !important; /* White color for the link */
+    text-decoration: none !important; /* Remove underline from the link */
+}
+
+/* Call-to-action button styling */
+#mission-Section .cta-button2 {
+  margin-top: 20px; /* Smaller space before button */
+  margin-bottom: 20px;
+  display:flex; /* Inline button */
+  background-color: #4a4a4a; /* Darker color for the button */
+  padding: 8px 20px; /* Smaller padding for a compact button */
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: bold; /* Bold text */
+  border-radius: 25px; /* Rounded corners for a soft look */
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 1px; /* Space between letters */
+  transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  color: white; /* White text inside the button */
+  max-width: 180px;
+  margin-left: 40%;
+  
+}
+
+/* Button hover effect */
+#mission-Section .cta-button2:hover {
+  background-color: #333; /* Slightly darker color on hover */
+  transform: translateY(-2px); /* Slight hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+/* Ensure no underline and text color inside the link */
+#mission-Section .cta-button2 a {
+  color: white !important; /* White color for the link */
+  text-decoration: none !important; /* Remove underline from the link */
+}
+
+/* Responsive styling for the mission section */
+@media (max-width: 768px) {
+    #mission-Section {
+        padding: 20px 10px;
+    }
+
+    #mission-Section .container {
+        padding: 0 10px;
+    }
+
+    #mission-Section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    #mission-Section p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    #mission-Section .cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+/* Navbar Styling */
+#navbar {
+    display: flex; /* Flexbox layout to align items in a row */
+    align-items: center; /* Vertically center the items */
+}
+  
+/* Navbar Styling */
+#navbar {
+    display: flex; /* Flexbox layout to align items horizontally */
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the start */
+}
+  
+  /* Logo Styling */
+  #navbar .logo {
+      width: 40px; /* Adjust logo size */
+      height: 40px;
+      background-color: transparent; /* Ensure background is transparent */
+    border-radius: 50%; /* Optional: if you want a circular image */
+    object-fit: contain; /* Ensure image aspect ratio is maintained */
+    margin-right: 10px; /* Space between logo and text */
+    mix-blend-mode: darken;
+}
+
+  /* Navbar Text (HDA) */
+  #navbar span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    /* Slightly move the text upwards */
+    position: relative;
+    top: -15px; /* Adjust this value to move HDA as per your need */
+}
+
+/* Remove hover effect from the specific anchor tag containing the logo */
+#navbar li:first-child a:hover {
+    background-color: transparent; /* Remove background change */
+    color: inherit; /* Keep text color unchanged */
+    transform: none; /* Remove any transformation effect */
+    filter: none; /* Remove any filters applied on hover */
+}
+  
+  /* Retain hover effect for remaining anchor tags */
+  #navbar li a:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Example hover background */
+      color: #ffcc00; /* Example hover text color */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+/* Card Styling */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow cards to wrap for responsiveness */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-header {
+      background-color: #f8f8f8;
+    padding: 10px;
+  }
+  
+  .card-body {
+    padding: 10px 15px;
+}
+  
+  .card h3 {
+      font-size: 1.2rem;
+      margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      width: 100%; /* Ensure the footer spans the entire width */
+  }
+  
+  /* Responsive footer */
+  @media (max-width: 768px) {
+      footer {
+          font-size: 0.8rem;
+          padding: 10px 0;
+      }
+  }
+ /* Sponsors Section Styling */
+#sponsors-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  #sponsors-section h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    color: #333;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  #sponsors-section p {
+    font-size: 1.0rem;
+    color: #666;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out 0.2s;
+  }
+  
+  .sponsors-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    overflow: hidden; /* Prevent overflow during animations */
+  }
+  
+  .sponsor-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 220px; /* Increased height for better spacing */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    opacity: 0;
+    animation: slideInUp 0.8s ease-in-out forwards;
+    animation: slideInFromRight 1s ease-in-out forwards; /* Slide in from the right */
+  }
+  
+  .sponsor-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sponsor-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure image scales properly */
+    max-height: 130px; /* Limit image height */
+    padding-top: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sponsor-card:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .sponsor-card h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0;
+    flex-shrink: 0; /* Prevent text from shrinking */
+    transition: color 0.3s ease;
+  }
+  
+  .sponsor-card:hover h4 {
+    color: #e67e22; /* Change color on hover */
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sponsor-card:nth-child(2) {
+    animation-delay: 0.3s; /* Add delays for staggered animation */
+  }
+  
+  .sponsor-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .sponsor-card:nth-child(4) {
+    animation-delay: 0.9s;
+  }  
+/* Keyframe Animations */
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* Typing Animation */
+#typing-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 4px solid rgba(0, 0, 0, 0.75);
+  padding-right: 5px;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* Cursor Blinking */
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+.card, .cta-button, .sponsor-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card.visible, .cta-button.visible, .sponsor-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sponsors-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.sponsor-card {
+  flex: 0 0 auto;
+  width: 150px; /* Adjust size as needed */
+}
+/* Styling for the particles.js container */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Particles behind content */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ensure interactions pass through */
+}
+
+

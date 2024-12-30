@@ -1,0 +1,722 @@
+/* General Aesthetic Style */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+section {
+    
+    padding: 20px;
+    text-align: center;
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('https://www.shutterstock.com/image-illustration/sci-fi-neon-glowing-purple-260nw-1772346326.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-text {
+    width: 50%;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeInText 1.5s ease-out;
+}
+
+.intro-text p {
+    font-size: 18px;
+    animation: fadeInText 1.5s ease-out;
+    animation-delay: 0.5s;
+}
+
+.intro-image {
+    width: 40%;
+    opacity: 0;
+    transform: translateX(50%);
+    animation: slideInImage 1.5s forwards;
+    animation-delay: 1s; /* Delay to sync with text animation */
+}
+
+.intro-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInImage {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Story Section */
+#story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.story-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px;
+}
+
+.left-side {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-right: 30px;
+    background-color: rgba(0, 0, 0, 0.3); /* Adds background for text */
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(10px);
+    animation: fadeInText 1.5s ease-out;
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.story-img {
+    width: 85%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    object-fit: cover;
+    height: 450px;
+}
+
+.story-img:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.story-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Adds an overlay to the image */
+    border-radius: 15px;
+}
+
+/* Animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .story-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .story-img {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .left-side {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+}
+
+/* Mission & Values Section */
+#mission-values {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+}
+
+.mission-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Reduced Card Size and Enhanced Styling */
+.mission-card {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 200px; /* Reduced card width */
+    height: 250px; /* Set a fixed height */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mission-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mission-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #0c1116;
+}
+
+.mission-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Add a visual separator (gradient) between the image and text */
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+    z-index: 1;
+}
+
+/* Add subtle animation to images when hovering */
+.mission-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #mission-values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-card {
+        width: 90%; /* Make cards larger on mobile screens */
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 20px;
+    }
+}
+
+/* Interactive Features Section */
+#interactive-features {
+    text-align: center;
+    padding: 40px;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 280px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 80%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.carousel-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.login-btn-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.login-btn-container a:hover {
+    background-color: #2980b9;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Prev and Next buttons (specific styles) */
+#prev-slide {
+    left: 10px;
+}
+
+#next-slide {
+    right: 10px;
+}
+
+/* Contact Information Section */
+#contact-info {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced the gap between cards */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    background-color: #fff;
+    padding: 15px; /* Reduced padding */
+    width: 180px; /* Reduced the width of the cards */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px); /* Slightly reduced hover effect */
+}
+
+.contact-item img {
+    width: 40px; /* Reduced icon size */
+    margin-bottom: 10px; /* Adjusted margin for smaller icons */
+}
+
+.contact-item h3 {
+    font-size: 16px; /* Smaller heading */
+    color: #0c1116;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    font-size: 12px; /* Smaller text size */
+    color: #555;
+    margin-bottom: 10px; /* Slightly increased margin for text separation */
+}
+
+.contact-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 12px; /* Smaller text for links */
+    display: inline-block;
+    margin-top: 5px; /* Added margin for spacing */
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Card Specific Adjustments */
+.contact-item.social-media {
+    padding: 20px; /* Adjusted for better spacing */
+    width: 220px; /* Slightly wider for better social media display */
+}
+
+.contact-item.social-media h3 {
+    font-size: 18px; /* Increased size for social media header */
+}
+
+.contact-item.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-item.social-media li {
+    margin: 8px 0; /* Space between items */
+    display: inline-block;
+}
+
+.contact-item.social-media a {
+    font-size: 14px; /* Slightly larger font for social links */
+    color: #3498db;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+.contact-item.social-media a:hover {
+    color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-item.social-media {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Testimonial Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-item {
+    width: 300px;
+    padding: 30px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-item p {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-item .author-title {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.carousel-btn:focus {
+    outline: none;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        flex-direction: column;
+    }
+
+    .testimonial-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-btn {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+}
+
+
+/* Location Section */
+#location {
+    background-color: #f2f2f2;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+#location h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#location p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Location Container */
+.location-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Left Section (Map) */
+.location-left {
+    flex: 1;
+    max-width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Right Section (Location Info) */
+.location-right {
+    flex: 1;
+    max-width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Location Info Text */
+.location-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.location-info p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.location-info address {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Call to Action Button */
+.cta-btn a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #location h2 {
+        font-size: 28px;
+    }
+
+    .location-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-left, .location-right {
+        max-width: 100%;
+    }
+
+    .location-right {
+        padding: 20px;
+    }
+}
+

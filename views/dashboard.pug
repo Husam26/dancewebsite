@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    title Dashboard
+    link(rel="stylesheet", href="../static/dashboard.css")
+  body
+    nav#navbar
+      ul
+        li
+          a(href="/") 
+            img(src="https://img.freepik.com/free-vector/grunge-splatter-silhouette-female-modern-dance-pose_1048-18624.jpg", alt="Dance Academy Logo", class="logo")
+            span HDA
+        li
+          a(href="/") Home
+        li
+          a(href="/about") About
+        li
+          a(href="/services") Services
+        li
+          a(href="/class-info") Class Info
+        li
+          a(href="/contact") Contact Us
+        li 
+          a(href="/logout") Logout 
+    
+    .dashboard-container
+      h1 Welcome, #{fullName}!
+      p Explore all the features available to you as a member of our Dance Academy.
+
+      .dashboard-sections
+        .section
+          h2 Class Schedules
+          p View your upcoming and ongoing class schedules.
+          button(onclick="window.location.href='/schedules'") View Schedules
+
+        .section
+          h2 Online Classes
+          p Access online dance classes anytime, anywhere.
+          button(onclick="window.location.href='/online-classes'") Join Classes
+
+        .section
+          h2 Bookings
+          p Manage your current and upcoming bookings.
+          button(onclick="window.location.href='/bookings'") Manage Bookings
+
+        .section
+          h2 Payment Options
+          p Review and update your payment details.
+          button(onclick="window.location.href='/payments'") Manage Payments
+
+        .section
+          h2 Personalized Recommendations
+          p Discover classes and opportunities tailored just for you.
+          button(onclick="window.location.href='/recommendations'") Explore More
+
+    footer
+      | &copy; 2024 Dance Academy. All rights reserved.

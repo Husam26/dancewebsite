@@ -1,0 +1,52 @@
+extends base.pug
+
+block scripts
+    script(src='/static/login.js')
+
+block style
+    style
+        include ../static/style.css
+        include ../static/login.css
+
+block content
+    .container
+        .login-section
+            h2 Login
+            // Login form for existing users
+            form(action='/login', method='post')
+                .form-group
+                    label(for='email') Email:
+                    input(type='email', name='email', id='email', required=true)
+                .form-group
+                    label(for='password') Password:
+                    input(type='password', name='password', id='password', required=true)
+                .form-group
+                    button(type='submit') Login
+                .form-group
+                    a(href='#' id='create-account-link') Create an Account
+                .forgot-password
+                    a(href='/forgot-password') Forgot Password?
+
+        .register-section(style='display:none;') 
+            h2 Create an Account
+            // Registration form for new users
+            form(action='/register', method='post')
+                .form-group
+                    label(for='full-name') Full Name:
+                    input(type='text', name='fullName', id='full-name', required=true)
+                .form-group
+                    label(for='phone-number') Phone Number:
+                    input(type='tel', name='phoneNumber', id='phone-number', pattern='[0-9]{10}', title='Enter a valid 10-digit phone number', required=true)
+                .form-group
+                    label(for='new-email') Email:
+                    input(type='email', name='email', id='new-email', required=true)
+                .form-group
+                    label(for='new-password') Password:
+                    input(type='password', name='password', id='new-password', required=true)
+                .form-group
+                    label(for='confirm-password') Confirm Password:
+                    input(type='password', name='confirmPassword', id='confirm-password', required=true)
+                .form-group
+                    button(type='submit') Register
+                .form-group
+                    a(href='#' id='back-to-login-link') Back to Login

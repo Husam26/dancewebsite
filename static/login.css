@@ -1,0 +1,185 @@
+/* Container styling for the login page */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #1d1f26; /* Dark background */
+}
+
+/* Login and Registration sections styling */
+.login-section,
+.register-section {
+    background-color: #2a2f3b; /* Darker card background */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    width: 100%;
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Header styling */
+h2 {
+    font-size: 24px;
+    color: #f4f7fb; /* Light color for header */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #b0b3b8; /* Light grey label */
+    position: absolute;
+    top: -18px;
+    left: 13px;
+    font-size: 12px;
+    background-color: #2a2f3b;
+    padding: 0 5px;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 13px;
+    font-size: 13px;
+    color: #f4f7fb;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #7491af;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for submit button */
+button[type="submit"]:hover {
+    background-color: #5c7f99;
+    transform: translateY(-3px);
+}
+
+/* Active effect for submit button */
+button[type="submit"]:active {
+    background-color: #5f6e7f;
+    transform: translateY(2px);
+}
+
+/* Divider between login and registration sections */
+.divider {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.divider span {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Forgot password link */
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #f4f7fb;
+    font-size: 14px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Custom styling for links (for example, "Create an Account" & "Back to Login") */
+a {
+    color: #8295aa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .login-section, .register-section {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Form animation (Slide in and fade in effect) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating label effect for inputs */
+input[type="text"]:focus + label,
+input[type="tel"]:focus + label,
+input[type="email"]:focus + label,
+input[type="password"]:focus + label {
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Container animation */
+.container {
+    animation: fadeInUp 1s ease-out forwards;
+}
