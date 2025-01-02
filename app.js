@@ -80,6 +80,20 @@ app.get('/about', (req, res) => {
   res.status(200).render('about.pug');
 });
 
+app.get('/services', (req, res) => {
+  res.status(200).render('services.pug');
+});
+
+app.get('/class-info', (req, res) => {
+  res.status(200).render('class-info.pug');
+});
+
+//dashboard routes
+app.get('/dashboard', (req, res) => {
+  res.status(200).render('dashboard.pug');
+});
+
+
 // Protect dashboard route
 app.get('/home', (req, res) => {
   if (!req.session.userId) {

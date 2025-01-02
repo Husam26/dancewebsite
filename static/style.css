@@ -49,7 +49,6 @@ body, ul {
 /* Navbar responsive styling */
 @media (max-width: 768px) {
     #navbar ul {
-        flex-direction: column;
         align-items: center;
         gap: 10px;
     }

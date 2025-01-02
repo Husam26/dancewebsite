@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    
+  }
+  /* Navbar styling */
+#navbar {
+    background-color: #222;
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    padding: 0px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+#navbar li {
+    display: inline-block;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.0em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Dancing Script', cursive;
+}
+
+#navbar a:hover {
+    background-color: #FF5733;
+    color: white;
+}
+
+/* Navbar responsive styling */
+@media (max-width: 768px) {
+    #navbar ul {
+        align-items: center;
+        gap: 10px;
+    }
+
+    #navbar a {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+}
+/* Navbar Styling */
+#navbar {
+    display: flex; /* Flexbox layout to align items in a row */
+    align-items: center; /* Vertically center the items */
+}
+  
+/* Navbar Styling */
+#navbar {
+    display: flex; /* Flexbox layout to align items horizontally */
+    align-items: center; /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the start */
+}
+  
+  /* Logo Styling */
+  #navbar .logo {
+    width: 40px; /* Adjust logo size */
+    height: 40px;
+    background-color: transparent; /* Ensure background is transparent */
+    border-radius: 50%; /* Optional: if you want a circular image */
+    object-fit: contain; /* Ensure image aspect ratio is maintained */
+    margin-right: 10px; /* Space between logo and text */
+    mix-blend-mode: darken;
+}
+
+  /* Navbar Text (HDA) */
+  #navbar span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    /* Slightly move the text upwards */
+    position: relative;
+    top: -15px; /* Adjust this value to move HDA as per your need */
+}
+
+/* Remove hover effect from the specific anchor tag containing the logo */
+#navbar li:first-child a:hover {
+    background-color: transparent; /* Remove background change */
+    color: inherit; /* Keep text color unchanged */
+    transform: none; /* Remove any transformation effect */
+    filter: none; /* Remove any filters applied on hover */
+}
+  
+  /* Retain hover effect for remaining anchor tags */
+  #navbar li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Example hover background */
+    color: #ffcc00; /* Example hover text color */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Main Section Styling */
+#class-info-section {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Class Categories */
+.class-categories {
+    margin-bottom: 40px;
+}
+
+.class-categories h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.category {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FF6600;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Weekly Schedule */
+.schedule {
+    margin-bottom: 40px;
+}
+
+.schedule h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule th, .schedule td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+
+.schedule th {
+    background-color: #FF6600;
+    color: white;
+    font-size: 18px;
+}
+
+.schedule td {
+    background-color: #f9f9f9;
+}
+
+.schedule td:hover {
+    background-color: #f2f2f2;
+}
+
+.schedule tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Instructor Section */
+.instructor-list {
+    display: flex;
+    justify-content: space-evenly; /* Aligns the items evenly */
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+.instructor {
+    text-align: center;
+    width: 280px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+}
+
+.instructor:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.instructor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.instructor:hover img {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.instructor h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FF6600;
+    margin-bottom: 10px;
+}
+
+.instructor p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Call to Action (CTA) Button */
+.cta-button {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta-button a {
+    padding: 18px 35px;
+    background-color: #FF6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button a:hover {
+    background-color: #cc5200;
+    transform: scale(1.1); /* Button enlarge effect */
+}
+
+/* Hover animation for the button */
+.cta-button a:active {
+    transform: scale(0.95);
+}
+
+/* Button Glow Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instructor {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    width: 100%; /* Ensure the footer spans the entire width */
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .class-categories,
+    .schedule,
+    .instructor-list {
+        padding: 20px;
+    }
+
+    .category {
+        width: 45%;
+    }
+
+    .instructor {
+        width: 45%;
+    }
+
+    .cta-button a {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .instructor {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cta-button a {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    h1,
+    .class-categories h2,
+    .schedule h2 {
+        font-size: 28px;
+    }
+}

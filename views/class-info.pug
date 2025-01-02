@@ -1,0 +1,82 @@
+extends base.pug
+
+block scripts
+    script(src='/static/class-info.js')
+
+block style
+    style
+        
+        include ../static/class-info.css
+
+block content
+    section#class-info-section
+        h1 Our Dance Classes
+
+        .class-categories
+            h2 Class Categories
+            .category-list
+                .category
+                    h3 Beginner
+                    p Introductory classes for new dancers.
+                .category
+                    h3 Intermediate
+                    p For dancers who have mastered the basics.
+                .category
+                    h3 Advanced
+                    p Challenging classes for experienced dancers.
+
+        .schedule
+            h2 Weekly Schedule
+            table
+                tr
+                    th Class Name
+                    th Monday
+                    th Tuesday
+                    th Wednesday
+                    th Thursday
+                    th Friday
+                tr
+                    td Ballet Basics
+                    td 6:00 PM
+                    td -
+                    td 5:00 PM
+                    td -
+                    td 7:00 PM
+                tr
+                    td Hip-Hop Fundamentals
+                    td -
+                    td 5:00 PM
+                    td -
+                    td 6:00 PM
+                    td -
+                tr
+                    td Contemporary Dance
+                    td 7:00 PM
+                    td -
+                    td 6:00 PM
+                    td -
+                    td 5:00 PM
+
+        .instructors
+            h2 Meet Our Instructors
+            .instructor-list
+                .instructor
+                    img(src='https://images.pexels.com/photos/6582862/pexels-photo-6582862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', alt='Instructor 1')
+                    h3 Jane Doe
+                    p Dance Style: Ballet, Contemporary
+                    p Bio: Jane is a professional dancer with over 10 years of experience.
+                .instructor
+                    img(src='https://images.pexels.com/photos/28400613/pexels-photo-28400613/free-photo-of-stylish-man-in-coat-and-hat-against-wooden-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', alt='Instructor 2')
+                    h3 John Smith
+                    p Dance Style: Hip-Hop, Street Dance
+                    p Bio: John is known for his dynamic and energetic teaching style.
+
+        .class-requirements
+            h2 Skill Requirements
+            ul
+                li Beginner: No prior experience needed.
+                li Intermediate: Must be comfortable with basic dance movements.
+                li Advanced: Requires years of dance training and experience.
+
+        .cta-button
+            a(href='/login') Join a Class Now!

@@ -1,0 +1,73 @@
+extends base.pug
+
+block scripts
+    script(src='/static/services.js')
+
+block style
+    style
+        
+        include ../static/services.css
+
+block content
+    section#services-hero
+        h1 Discover Our Services
+        p
+            | Explore a wide range of dance services designed to inspire and 
+            | nurture your passion for dance.
+
+    section#services-cards
+        .cards-container
+            .card
+                img(src="https://images.pexels.com/photos/2896167/pexels-photo-2896167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="Dance Classes")
+                .card-header
+                    h2 Dance Classes
+                .card-body
+                    p
+                        | Join our regular dance classes for all skill levels, 
+                        | including ballet, hip-hop, salsa, and more.
+                    a(href="/login") Learn More
+            .card
+                img(src="https://images.pexels.com/photos/6713926/pexels-photo-6713926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="Workshops")
+                .card-header
+                    h2 Workshops
+                .card-body
+                    p
+                        | Weekend workshops to help you refine techniques or 
+                        | learn something new in an intensive setting.
+                    a(href="/login") Learn More
+            .card
+                img(src="https://images.pexels.com/photos/6715947/pexels-photo-6715947.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="Private Lessons")
+                .card-header
+                    h2 Private Lessons
+                .card-body
+                    p
+                        | Get personalized coaching to reach your dance goals faster.
+                    a(href="/login") Learn More
+            .card
+                img(src="https://images.pexels.com/photos/5152572/pexels-photo-5152572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="Events & Performances")
+                .card-header
+                    h2 Events & Performances
+                .card-body
+                    p
+                        | Participate in or enjoy performances showcasing the 
+                        | incredible talent of our community.
+                    a(href="/login") Learn More
+
+    section#testimonials
+        h2 What Our Students Say
+        .testimonials-container
+            .testimonial
+                p
+                    | "The instructors here are amazing, and I love the variety of 
+                    | classes offered!" – Sarah M.
+            .testimonial
+                p
+                    | "Dance Academy helped me build my confidence and refine my skills." 
+                    | – Alex J.
+
+    section#cta
+        h2 Ready to Dance?
+        p
+            | Sign up now to unlock access to our full schedule and start your 
+            | dance journey with us!
+        a(href="/login", class="cta-button") Join Now
